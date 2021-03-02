@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { GlobalvarService } from "../globalvar.service";
 
 @Component({
@@ -7,7 +8,7 @@ import { GlobalvarService } from "../globalvar.service";
   styleUrls: ["./input.component.css"]
 })
 export class InputComponent implements OnInit {
-  constructor(public globalvar: GlobalvarService) {}
+  constructor(private router: Router, public globalvar: GlobalvarService) {}
 
   judul: string = "";
   isi: string = "";
@@ -21,5 +22,9 @@ export class InputComponent implements OnInit {
   Tambah() {
     let list = [this.judul, this.isi, this.tanggal];
     this.globalvar.AddNote(list);
+  }
+
+  Akses(index) {
+    this.router.navigate(["/detail/" + index]);
   }
 }
