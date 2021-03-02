@@ -13,6 +13,7 @@ export class InputComponent implements OnInit {
   judul: string = "";
   isi: string = "";
   tanggal: Date;
+  validasi: string = "";
 
   notes = [];
   ngOnInit() {
@@ -20,8 +21,13 @@ export class InputComponent implements OnInit {
   }
 
   Tambah() {
-    let list = [this.judul, this.isi, this.tanggal];
-    this.globalvar.AddNote(list);
+    if (!this.tanggal || this.judul == "" || this.isi == "") {
+      this.validasi = "Ada hal yang belum terisi!";
+    } else {
+      this.validasi = "";
+      let list = [this.judul, this.isi, this.tanggal];
+      this.globalvar.AddNote(list);
+    }
   }
 
   Akses(index) {

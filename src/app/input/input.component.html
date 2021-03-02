@@ -15,12 +15,19 @@
   </tr>
   <tr>
     <td><label for="tanggalBro">Tanggal</label></td>
-    <td><input type="date" [(ngModel)]="tanggal" id="tanggalBro" placeholder="dd-mm-yyyy"/></td>
+    <td>
+      <input
+        type="date"
+        [(ngModel)]="tanggal"
+        id="tanggalBro"
+        placeholder="dd-mm-yyyy"
+      />
+    </td>
   </tr>
 </table>
 
 <br />
-<button (click)="Tambah()">Tambah Note</button>
+<button (click)="Tambah()">Tambah Note</button> <span style="color:red;"> {{validasi}}</span>
 <br />
 
 <p>LIST NOTES</p>
@@ -43,5 +50,6 @@
       <td>: {{item[2]}}</td>
     </tr>
   </table>
-  <br>
+
+  <br />
 </div>
