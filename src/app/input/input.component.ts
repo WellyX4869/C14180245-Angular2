@@ -12,7 +12,11 @@ export class InputComponent implements OnInit {
   judul: string = "";
   isi: string = "";
   tanggal: Date;
-  ngOnInit() {}
+
+  notes = [];
+  ngOnInit() {
+    this.notes = this.globalvar.GetNotes();
+  }
 
   Tambah() {
     let list = [this.judul, this.isi, this.tanggal];

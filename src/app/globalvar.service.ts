@@ -12,4 +12,8 @@ export class GlobalvarService {
   public GetNotes(){
     return this.list;
   }
+
+  public GetNote(index){
+    return this.list[index];
+  }
 }
