@@ -14,7 +14,8 @@ import { FavoritComponent } from "./favorit/favorit.component";
 const ROUTES: Routes = [
   { path: "input", component: InputComponent },
   { path: "detail", component: DetailComponent },
-  { path: "detail/:index", component: DetailComponent }
+  { path: "detail/:index", component: DetailComponent },
+  { path: "favorit", component: FavoritComponent }
 ];
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],

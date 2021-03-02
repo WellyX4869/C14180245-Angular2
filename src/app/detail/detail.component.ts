@@ -15,8 +15,13 @@ export class DetailComponent implements OnInit {
 
   index = 0;
   note = [];
+
   ngOnInit() {
     this.index = parseInt(this.route.snapshot.paramMap.get("index"));
     this.note = this.globalvar.GetNote(this.index);
+  }
+
+  Favorite() {
+    this.globalvar.AddFavorite(this.index);
   }
 }

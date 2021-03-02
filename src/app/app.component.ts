@@ -12,10 +12,14 @@ export class AppComponent {
   constructor(private router: Router, public globalvar: GlobalvarService) {}
 
   ngOnInit() {
+    this.AksesInput();
+  }
+
+  AksesInput(){
     this.router.navigate(["/input"]);
   }
 
-  Login() {
-    this.router.navigate(["/input"]);
+  AksesFavorite(){
+    this.router.navigate(["/favorit"]);
   }
 }
