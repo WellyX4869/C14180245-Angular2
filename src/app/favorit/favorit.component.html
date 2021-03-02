@@ -1,9 +1,7 @@
 <p>LIST FAVORITE NOTES</p>
 <div *ngFor="let item of fav; let i = index;">
+  <p><b>Notes Favorite {{i+1}}</b></p>
   <table border="0">
-    <tr>
-      <td><b>Notes Favorite {{i+1}}</b></td>
-    </tr>
     <tr>
       <td><label for="judulText">Judul</label></td>
       <td>: {{item[0]}}</td>
