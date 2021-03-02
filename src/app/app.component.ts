@@ -8,16 +8,14 @@ import { GlobalvarService } from "./globalvar.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(private router: Router, public globalvar: GlobalvarService) {
-    this.namaglobal = this.globalvar.getnama();
+  
+  constructor(private router: Router, public globalvar: GlobalvarService) {}
+
+  ngOnInit() {
+    this.router.navigate(["/input"]);
   }
 
-  textnama = "";
-  name = "Angular " + VERSION.major;
-  namaglobal = "";
-  OPENHALLOGIN() {
-    this.globalvar.setnama(this.textnama);
-    this.namaglobal = this.globalvar.getnama();
-    this.router.navigate(["/home/" + this.textnama]);
+  Login() {
+    this.router.navigate(["/input"]);
   }
 }

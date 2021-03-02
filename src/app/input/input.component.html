@@ -1,0 +1,25 @@
+<p>
+HALAMAN INPUT
+</p>
+
+<table border="0">
+  <tr>
+    <td><label for="judulText">Judul</label></td>
+    <td><input type="text" [(ngModel)]="judul" id="judulText"></td>
+  </tr>
+  <tr>
+    <td><label for="isiText">Isi</label></td>
+    <td><textarea name="message" [(ngModel)]="isi" rows="5" cols="20"></textarea></td>
+  </tr>
+  <tr>
+    <td><label for="tanggalBro">Tanggal</label></td>
+    <td><input type="date" [(ngModel)]="tanggal" id="tanggalBro"></td>
+  </tr>
+</table>
+<br>
+<button (click)="Tambah()">Tambah Note</button>
+<br>
+<p>LIST NOTES</p>
+<div>
+  
+</div>

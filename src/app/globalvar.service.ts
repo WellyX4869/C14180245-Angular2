@@ -2,14 +2,14 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class GlobalvarService {
-  private Datanama: string = "usercoba";
+  public list = [];
   constructor() {}
 
-  public getnama() {
-    return this.Datanama;
+  public AddNote(otherList){
+    this.list.push(otherList);
   }
 
-  public setnama(nama: string) {
-    this.Datanama = nama;
+  public GetNotes(){
+    return this.list;
   }
 }
